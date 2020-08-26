@@ -48,12 +48,12 @@ public class CourseraTest extends BaseTestClass{
 		PageBaseClass pageBase = new PageBaseClass(driver,logger,prop);
 		PageFactory.initElements( driver, pageBase);
 		landingPage = pageBase.OpenApplication("WebsiteURL");
-		landingPage.getTitle("LandingPageTitle");
+		//landingPage.getTitle("LandingPageTitle");
 		ReadExcelData readExcelData = new ReadExcelData();
 		data = readExcelData.readExceldata1();
 		landingPage.searchForCourses(data[1]);
 		coursesPage = landingPage.clickOnSearch();
-		coursesPage.getTitle("CoursesPageTitle");
+		//coursesPage.getTitle("CoursesPageTitle");
 		coursesPage.clickOnLevel();
 		coursesPage.clickOnLevelType();
 		coursesPage.clickOnLanguage();

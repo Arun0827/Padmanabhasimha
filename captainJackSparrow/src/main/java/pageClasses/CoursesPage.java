@@ -169,7 +169,7 @@ public class CoursesPage extends PageBaseClass {
 
 				driver.close();
 				driver.switchTo().window(tabs.get(0));
-				waitTime(2);
+				//waitTime(2);
 
 			}
 		}

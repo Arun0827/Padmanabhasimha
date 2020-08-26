@@ -13,8 +13,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -64,7 +62,7 @@ public class PageBaseClass extends BaseTestClass {
 		}
 	}
 
-	public void getTitle(String expectedTitle) {
+	/*public void getTitle(String expectedTitle) {
 		try {
 			Assert.assertEquals(driver.getTitle(), prop.getProperty(expectedTitle));
 			reportPass("Actual Title : " + driver.getTitle() + " - equals to Expected Title : " + expectedTitle);
@@ -73,12 +71,12 @@ public class PageBaseClass extends BaseTestClass {
 		} catch (Exception e) {
 			reportFail(e.getMessage());
 		}
-	}
+	}*/
 
 	public void reportFail(String reportString) {
 		logger.log(Status.FAIL, reportString);
 		ScreenShot();
-		Assert.fail(reportString);
+		//Assert.fail(reportString);
 	}
 
 	public void reportPass(String reportString) {
