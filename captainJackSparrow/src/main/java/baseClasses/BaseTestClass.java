@@ -6,8 +6,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -32,16 +32,16 @@ public class BaseTestClass {
 		} else if (browserName.equalsIgnoreCase("Mozilla")) {
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\drivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
-		} else if (browserName.equalsIgnoreCase("IE")) {
-			System.setProperty("webdriver.ie.driver",
-					System.getProperty("user.dir") + "\\drivers\\IEDriverServer.exe");
-			driver = new InternetExplorerDriver();
+		} else if (browserName.equalsIgnoreCase("edge")) {
+			//System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "\\drivers\\IEDriverServer.exe");
+			//driver = new InternetExplorerDriver();
+			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "\\drivers\\msedgedriver.exe");
+			driver = new EdgeDriver();
 		}
 		
 		logger.log(Status.PASS, "Successfully launched the browser");
 
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		//driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 
 		if(prop == null) {

@@ -47,7 +47,7 @@ public class CoursesPage extends PageBaseClass {
 	@FindBy(xpath = "//div[@class='_xliqh9g']//div[5]//div[2]//div[1]//span")
 	public WebElement courseDuration;
 
-	@FindBy(xpath = "//span[@class='_16ni8zai m-b-0 rating-text number-rating number-rating-expertise']")
+	@FindBy(xpath = "//div[@class='_1srkxe1s XDPRating']/span")
 	public WebElement courseRating;
 
 	public CoursesPage clickOnLevel() {
@@ -55,6 +55,7 @@ public class CoursesPage extends PageBaseClass {
 		try {
 			logger.log(Status.INFO, "clicking on level box");
 			clickFunction(level);
+			waits(level);
 			logger.log(Status.PASS, "Succesfully clicked on level box");
 		} catch(Exception e) {
 
@@ -121,7 +122,6 @@ public class CoursesPage extends PageBaseClass {
 			clickFunction(outclick);
 			logger.log(Status.PASS, "Succesfully clicked on webpage");
 
-			waitTime(3);
 		} catch(Exception e) {
 
 			reportFail(e.getMessage());
@@ -144,6 +144,7 @@ public class CoursesPage extends PageBaseClass {
 
 				logger.log(Status.INFO, "clicking on list of courses");
 				clickFunction(listOfCourses.get(i));
+				waits(listOfCourses.get(i));
 				logger.log(Status.PASS, "Succesfully clicked on list of courses");
 
 				logger.log(Status.INFO, "waiting for list of courses to be clicked");
@@ -166,10 +167,11 @@ public class CoursesPage extends PageBaseClass {
 				logger.log(Status.INFO, "passing the data to excel");
 				writeExcelData.writeExcel2(array, k);
 				logger.log(Status.PASS, "Succesfully passed the data to excel");
+				waitTime(3);
 
 				driver.close();
 				driver.switchTo().window(tabs.get(0));
-				//waitTime(2);
+				
 
 			}
 		}

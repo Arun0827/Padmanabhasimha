@@ -53,6 +53,7 @@ public class PageBaseClass extends BaseTestClass {
 	}
 
 	public void waitTime(int time) {
+   
 
 		try {
 			Thread.sleep(time*1000);
@@ -60,23 +61,19 @@ public class PageBaseClass extends BaseTestClass {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 	}
 
-	/*public void getTitle(String expectedTitle) {
-		try {
-			Assert.assertEquals(driver.getTitle(), prop.getProperty(expectedTitle));
-			reportPass("Actual Title : " + driver.getTitle() + " - equals to Expected Title : " + expectedTitle);
-			ScreenShot();
-
-		} catch (Exception e) {
-			reportFail(e.getMessage());
-		}
-	}*/
+	public String getTitle() {
+		logger.log(Status.INFO, "Getting page title");
+		ScreenShot();
+		return driver.getTitle();
+	}
 
 	public void reportFail(String reportString) {
 		logger.log(Status.FAIL, reportString);
 		ScreenShot();
-		//Assert.fail(reportString);
+		
 	}
 
 	public void reportPass(String reportString) {

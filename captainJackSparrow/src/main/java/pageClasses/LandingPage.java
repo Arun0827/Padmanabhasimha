@@ -49,7 +49,7 @@ public class LandingPage extends PageBaseClass{
 		try {
 			logger.log(Status.INFO, "clicking enter key");
 			searchBox.sendKeys(Keys.ENTER);
-			waitTime(6);
+			waitTime(10);
 			logger.log(Status.PASS, "Successfully clicked on entered");
 		} catch(Exception e) {
 

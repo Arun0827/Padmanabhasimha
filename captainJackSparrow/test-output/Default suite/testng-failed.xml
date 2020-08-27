@@ -8,6 +8,7 @@
           <include name="coursesTest"/>
           <include name="closingBrowser"/>
           <include name="openBrowser"/>
+          <include name="validatePageTitles"/>
         </methods>
       </class> <!-- testCases.CourseraTest -->
     </classes>
