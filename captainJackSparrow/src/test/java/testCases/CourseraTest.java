@@ -36,7 +36,7 @@ public class CourseraTest extends BaseTestClass{
 		//data = readExcelData.readExceldata1();
 		invokeBrowser(browser);
 
-	}
+	} 
 	
 	@Test(groups = {"Smoke"}, alwaysRun = true)
 	public void validatePageTitles() throws Exception {

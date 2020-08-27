@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" >
+<suite name="Suite" parallel = "tests">
 	<test name="ChromeTest">
 		<parameter name="browser" value="chrome"></parameter>
 		<groups>
@@ -31,8 +31,8 @@
 
 
 	</test> <!-- Test -->
-	<test name="FirefoxTest">
-		<parameter name="browser" value="mozilla"></parameter>
+	<test name="OperaTest">
+		<parameter name="browser" value="opera"></parameter>
 		<groups>
 			<run>
 				<include name="Smoke" />

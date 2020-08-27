@@ -37,3 +37,15 @@
 [0827/222244.036:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
 [0827/222255.663:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
 [0827/225902.007:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0827/230338.786:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0827/230352.617:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0827/230957.861:ERROR:process_reader_win.cc(127)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0827/230957.864:ERROR:exception_snapshot_win.cc(99)] thread ID 19276 not found in process
+[0827/230957.880:ERROR:file_io_win.cc(161)] CreateFile C:\Users\Arun\AppData\Local\Temp\scoped_dir8348_1203465404\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0827/230957.881:ERROR:file_io_win.cc(161)] CreateFile C:\Users\Arun\AppData\Local\Temp\scoped_dir8348_1203465404\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0827/230957.881:ERROR:file_io_win.cc(161)] CreateFile C:\Users\Arun\AppData\Local\Temp\scoped_dir8348_1203465404\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0827/230957.883:ERROR:file_io_win.cc(170)] CreateFile C:\Users\Arun\AppData\Local\Temp\scoped_dir8348_1203465404\Crashpad\reports\d98da51c-cba7-48b9-ae4b-0c4f40ed9409.dmp: The system cannot find the path specified. (0x3)
+[0827/230957.883:ERROR:crash_report_exception_handler.cc(120)] PrepareNewCrashReport failed
+[0827/233224.222:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0827/233519.745:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0827/233537.458:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
