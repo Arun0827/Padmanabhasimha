@@ -22,7 +22,8 @@ public class BaseTestClass {
 	public ExtentReports report = ExtentReportManager.getReportInstance();
 	public ExtentTest logger;
 	public Properties prop;
-
+	
+	
 	public void invokeBrowser(String browserName) {
 
 		logger.log(Status.INFO, "Launching the browser");

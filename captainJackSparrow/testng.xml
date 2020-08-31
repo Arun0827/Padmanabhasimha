@@ -13,8 +13,6 @@
 		<classes>
 			<class name="testCases.CourseraTest" />
 		</classes>
-
-
 	</test> <!-- Test -->
 	<test name="EdgeTest">
 		<parameter name="browser" value="edge"></parameter>
@@ -46,6 +44,7 @@
 
 
 	</test> <!-- Test -->
+	
 
 </suite> <!-- Suite --> 
                    
